@@ -13,4 +13,6 @@
      - High Functional Cohesive : 
        - “refers structurally to the proximity of related elements: classes, components, services, and so on”
        - “in a microservices architecture, each service models a single domain or workflow, and therefore exhibits high functional cohesion.”
-       - 
+     - Single architecture quantum
+       - Even Separate services with same/common DB can have single quorum
+       - If services with different DB but console is same where these API's are integrated , then its single quorum 
