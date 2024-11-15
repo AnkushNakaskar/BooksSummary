@@ -21,12 +21,6 @@
            - and we need to make a call between them. If we make a synchronous call, the whole workflow will bog down, as the caller waits for the slower service to process and return. 
            - If on the other hand we make an asynchronous call, using the message queue as a buffer, we can allow the two services to execute operationally independently, 
              - allowing the caller to add messages to the queue and continue working, receiving notification when the workflow is complete.”
-
-
-Excerpt From
-Software Architecture: The Hard Parts
-Neal Ford
-This material may be protected by copyright.
      - High Functional Cohesive : 
        - “refers structurally to the proximity of related elements: classes, components, services, and so on”
        - “in a microservices architecture, each service models a single domain or workflow, and therefore exhibits high functional cohesion.”
@@ -36,3 +30,9 @@ This material may be protected by copyright.
      - Dynamic Quantum : 
        - Consistency : general advice to try to avoid cross-service transactions
        - Co-ordination : coordination the workflow modeled by the communication requires. The two common generic patterns for microservices are orchestration and choreography 
+##### Chapter 3 :
+- Buying from Business team for refactoring :
+    - To build a good business case for something of this magnitude you first need to understand the benefits of architectural modularity, 
+    - match those benefits to the issues you are facing with the current system,
+    - and finally analyze and document the trade-offs involved with breaking apart the application.
+    - When merge/acquisition happen ,Scalability is a big part of mergers and acquisitions, as is agility and extensibility, all of which are architectural concerns.
