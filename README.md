@@ -36,3 +36,26 @@
     - match those benefits to the issues you are facing with the current system,
     - and finally analyze and document the trade-offs involved with breaking apart the application.
     - When merge/acquisition happen ,Scalability is a big part of mergers and acquisitions, as is agility and extensibility, all of which are architectural concerns.
+- Architecture characteristics
+  - “There is one thing that will separate the pack into winners and losers: the on-demand capability to make bold and decisive course-corrections that are executed effectively and with urgency.”
+  - Agility : 
+    - “Speed-to-market is achieved through architectural agility—the ability to respond quickly to change”
+    - “including maintainability, testability, and deployability.”
+- Maintainability : 
+  - “is about the ease of adding, changing, or removing features, as well as applying internal changes such as maintenance patches, framework upgrades, third-party upgrades, and so on”
+  - “the change scope of the new requirement is at a domain-level within a particular domain service, making it easier to isolate the specific deployment unit requiring the change.”
+- Testability :
+  - “ Even if a monolithic application did have a suite of full regression tests, imagine the frustration of having to execute hundreds or even thousands of unit tests for a simple code change. 
+  - Not only would it take a long time to execute all of the tests, but the poor developer would be stuck researching why dozens of tests failed when in fact the failed tests have nothing to do with the change.”
+- Deployability :
+  - “ease of deployment—it is also about the frequency of deployment and the overall risk of deployment”
+  - “If your microservices must be deployed as a complete set in a specific order, please put them back in a monolith and save yourself some pain.”
+- Scalability : 
+  - “system to remain responsive as user load gradually increases over time”
+- Elasticity : 
+  - “elasticity, which is defined as the ability of a system to remain responsive during significantly”
+  - “also have the ability to instantaneously start up additional services to handle the spike in traffic. 
+  - Elasticity relies on services having a very small mean time to startup (MTTS), which is achieved architecturally by having very small, fine-grained services”
+  - “it is important to keep synchronous communication between services to a minimum when requiring high levels of scalability and elasticity”
+  - Refer to :
+  - ![](Software Architecture: The Hard Parts : BooksSummary/Figure 3-9. Scalability and elasticity improve with modularity.png)
