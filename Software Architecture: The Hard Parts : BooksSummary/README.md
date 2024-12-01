@@ -78,4 +78,12 @@
       - No of outgoing connection to code artifact like classes,component etc
     - **Check out the JDepend plugin of eclipse to realise the dependencies of various classes**
     - Abstraction , Instability and Distance from main sequence
-    - 
+##### Chapter 5 :
+- Decomposition patterns:
+  - Identify and size component pattern
+  - Gather common decomposition pattern
+  - Flatten component pattern
+  - Determine component dependencies pattern
+  - Create component domain pattern
+  - Create domain service pattern
+  - ![](Decomposition_pattern.png)
