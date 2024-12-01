@@ -59,3 +59,13 @@
   - “it is important to keep synchronous communication between services to a minimum when requiring high levels of scalability and elasticity”
   - Refer to :
   - ![](Software Architecture: The Hard Parts : BooksSummary/Figure 3-9. Scalability and elasticity improve with modularity.png)
+##### Chapter 4 :
+- Architectural decomposition :
+  - To divide a monolith application into microservices
+    - Two ways to look at it :
+      - Component base composition
+        - When application code is well written and definable components like packages ,
+        - proper segregation, you just need to extract those and form new services etc
+      - Tactical forking: 
+        - Its like sculpture create beautiful art from big/whole marble
+        - When there is no proper boundaries and code is very diversified, you will replicate code in another repo and start removing to form separate service
