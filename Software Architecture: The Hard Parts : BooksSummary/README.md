@@ -87,3 +87,15 @@
   - Create component domain pattern
   - Create domain service pattern
   - ![](Decomposition_pattern.png)
+  - 
+  - Identify and size component pattern :
+    - Identify component that are too big(doing too much) or less
+    - You can get a number of lines in particular packages
+    - Metric must be use to represent the components are as below
+      - Component name , Component namespace ,Percentage , Statements, Files
+    - Fitness function should be developed to monitor these via Custom Code or CI/CD pipeline(COTS Tools)
+      - TODO :: // **_These functions need to be monitored by Archs so that modules/services in good health_**
+      - Examples are : 
+        - Maintain component inventory
+          - Check if new module is added or removed
+          - Check if the percentage of module is exceeding the allowed limit
