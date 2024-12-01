@@ -69,3 +69,13 @@
       - Tactical forking: 
         - Its like sculpture create beautiful art from big/whole marble
         - When there is no proper boundaries and code is very diversified, you will replicate code in another repo and start removing to form separate service
+- Afferent and Efferent Coupling :
+  - To determine whether codebase is decomposable 
+  - Two ways to look at it :
+    - Afferent
+      - No of incoming connection to code artifact like classes,component etc
+    - Efferent:
+      - No of outgoing connection to code artifact like classes,component etc
+    - **Check out the JDepend plugin of eclipse to realise the dependencies of various classes**
+    - Abstraction , Instability and Distance from main sequence
+    - 
