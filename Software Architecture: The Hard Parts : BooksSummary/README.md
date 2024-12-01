@@ -58,7 +58,7 @@
   - Elasticity relies on services having a very small mean time to startup (MTTS), which is achieved architecturally by having very small, fine-grained services”
   - “it is important to keep synchronous communication between services to a minimum when requiring high levels of scalability and elasticity”
   - Refer to :
-  - ![](Software Architecture: The Hard Parts : BooksSummary/Figure 3-9. Scalability and elasticity improve with modularity.png)
+  - ![](Figure 3-9. Scalability and elasticity improve with modularity.png)
 ##### Chapter 4 :
 - Architectural decomposition :
   - To divide a monolith application into microservices
