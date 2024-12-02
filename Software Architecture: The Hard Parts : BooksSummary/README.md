@@ -99,3 +99,20 @@
         - Maintain component inventory
           - Check if new module is added or removed
           - Check if the percentage of module is exceeding the allowed limit
+  - Gather common pattern :
+    - Can identify the common functionality by
+      - Classes is used in different namespace and packages
+      - Use of naming like package : audit  etc.
+    - Fitness function :
+      - Find common name in leaf node of package
+      - Find duplicate code across the components
+  - Flatten pattern
+    - Orphan class should be moved to correct domain class like
+    - Suppose there is survey pkg, with implementation sub pkgs are : create,process,template
+    - You can move the class from pkg name : survey(orphan) into another sub pkg called : shared
+    - This pattern called flatten
+  - Determine component dependencies 
+    - Check for components are using other component classes for dependencies evaluation
+    - Fitness function :
+      - No component should have more than this much of dependencies 
+      - Some component should have dependencies on other like model should not be depends on server or other modules inside
