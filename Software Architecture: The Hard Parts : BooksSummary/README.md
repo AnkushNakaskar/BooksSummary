@@ -116,3 +116,12 @@
     - Fitness function :
       - No component should have more than this much of dependencies 
       - Some component should have dependencies on other like model should not be depends on server or other modules inside
+  - Create domain service pattern
+    - Once pkg's are flattened, we can create separate deployable components like Service Oriented Application
+      - If you break code into many small micro-services which lead to below problems
+      - distributed workflows,distributed transactions,operational containerization 
+      - without need for this fine grain
+      - Never move to SOA structure until you are all sure about the separate domain and no dependencies present
+    - Fitness functions :
+      - All components in domain/SOA should start with same namespace
+      - 
