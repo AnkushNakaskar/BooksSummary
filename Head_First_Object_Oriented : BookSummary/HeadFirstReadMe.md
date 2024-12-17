@@ -48,4 +48,18 @@
   - Arrow from one class to another , mention that target is field in calling class, 
     - like Arrow can be from Employee -> Address
 - Each use case should focus on only one customer goal. If you have multiple goals, you will need to write multiple use cases.
-- 
+- It gives us a way to avoid multiple classes just for different behaviour , 
+  - like in Type of instrument, we were extending classes, which can be delay as subclass of specification
+  - ```
+    Banjo extends Instrument{
+     public Banjo(String name, InstrumentSpec)
+    }
+    ```
+  - To have separate concrete class of Instrument as a one , dont have separate classes for each and every instrument 
+    - You can structure it as below
+    ![](MultipleClassesOfInstrumentToOnlyOne.png)
+    - As the above image explain , how we made Instrument class as a concrete class and extends the behaviour to specific class
+    - Now, we dont need to create new class of every Instrument since every details are given to SpecificClass
+    - Whenever someone want to search instruments or do some filters, they just have to invoke ``matches(InstrumentSpec)`` method
+      - Since every spec is concrete class, we will pass that in matches method, it will behave it respectively 
+   
