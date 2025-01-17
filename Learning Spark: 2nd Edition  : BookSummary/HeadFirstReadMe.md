@@ -46,8 +46,43 @@
         - Refer memory structure : https://medium.com/swlh/spark-oom-error-closeup-462c7a01709d
         - If we tried to load big partition , it will be Out of Memory error for Executor
         - Hence, try to assist correct number of partitions while doing the application loading data.
-        - ```python 
-             # In Python
-             log_df = spark.read.text("path_to_large_text_file").repartition(8)
-             print(log_df.rdd.getNumPartitions()) 
+          - ```python 
+               # In Python
+               log_df = spark.read.text("path_to_large_text_file").repartition(8)
+               print(log_df.rdd.getNumPartitions()) 
+            ```
+#### Getting started Apache Spark : (Installation and concept)
+  - Installation : 
+    - Get details from : https://www.apache.org/dyn/closer.lua/spark/spark-3.5.4/spark-3.5.4-bin-hadoop3.tgz
+    -Example to run sample spark app in shell is below
+      -   ```
+          # In Spark Shell
+          scala> val strings = spark.read.text("../README.md")
+          strings: org.apache.spark.sql.DataFrame = [value: string]
+          scala> strings.show(10, false)
           ```
+  - Spark Application and SparkSession : 
+    - Core of every Spark application is the Spark driver program, which creates a SparkSession object. 
+      - When you’re working with a Spark shell, the driver is part of the shell and the SparkSession object (accessible via the variable spark)
+    - **Spark Job** :
+      - Driver converts your Spark application into one or more Spark jobs . 
+      - It then transforms each job into a DAG. DAG into multiple stages
+    - **Spark Stages**
+      - DAG nodes are converted in multiple stages.
+      - Stages are created based on what operations can be performed serially or in parallel
+    - **Spark Job** :
+      - Each stage is comprised of Spark tasks (a unit of execution), 
+      - which are then federated across each Spark executor; 
+      - each task maps to a single core and works on a single partition of data
+      ![](spark_stage_job_task.png)
+  - Transformations, Actions, and Lazy Evaluation: 
+    - All transformations are evaluated lazily. That is, their results are not computed immediately, but they are recorded or remembered as a lineage.
+    - Nothing in a query plan is executed until an action is invoked
+  - Narrow and Wide Transformations : 
+    - Optimization can be done by either joining or pipelining some operations and assigning them to a stage, or breaking them into stages by determining which operations require a shuffle or exchange of data across clusters.
+    - Narrow transformation : 
+      - Any transformation where a single output partition can be computed from a single input partition is a narrow transformation
+      - filter() and contains() represent narrow transformations because they can operate on a single partition and produce the resulting output partition without any exchange of data.
+    - Wide Transformation : 
+      - Transformations such as groupBy() or orderBy() instruct Spark to perform wide transformations, where data from other partitions is read in, combined, and written to disk
+
