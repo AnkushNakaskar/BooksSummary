@@ -54,7 +54,8 @@
 #### Getting started Apache Spark : (Installation and concept)
   - Installation : 
     - Get details from : https://www.apache.org/dyn/closer.lua/spark/spark-3.5.4/spark-3.5.4-bin-hadoop3.tgz
-    -Example to run sample spark app in shell is below
+    -Example to run sample spark app in shell is below with cmd ```./spark-submit mnmcount.py mnm_dataset.csv ```
+    - You can get above files examples from here : https://github.com/databricks/LearningSparkV2/blob/master/chapter2/py/src/data/mnm_dataset.csv
       -   ```
           # In Spark Shell
           scala> val strings = spark.read.text("../README.md")
