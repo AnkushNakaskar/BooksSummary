@@ -87,3 +87,28 @@
     - Wide Transformation : 
       - Transformations such as groupBy() or orderBy() instruct Spark to perform wide transformations, where data from other partitions is read in, combined, and written to disk
 
+#### Apache Spark’s Structured APIs
+- **_What’s Underneath an RDD?_**
+  - RDD is divided into three part : 
+  - Dependencies :
+    - It defines the dependencies of data from which RDD can be constructed
+  - Partition:
+    - It defines the data parallelization in processing 
+  - ComputeFunction (Partition => Iterator[T]):
+    - It defines the computation logic on partitions, problem arise because compute function can is opaque like 
+    - Spark does not know the function is select,aggregate etc. 
+    - and also does not know the datatype hence spark will not be able to optimise. hence Dataframe,dataset came in picture.
+  - operators like filtering, selecting, counting, aggregating, averaging, and grouping,
+    - let you tell Spark what you wish to compute with your data, and as a result, it can construct an efficient query plan for execution.
+- **_The DataFrame API_**
+  - Dataframe are like distributed in-memory tables
+  - Defining a schema up front as opposed to taking a schema-on-read approach offers three benefits
+    - You relieve Spark from the onus of inferring data types.
+    - You prevent Spark from creating a separate job just to read a large portion of your file to ascertain the schema, which for a large data file can be expensive and time-consuming.
+    - You can detect errors early if data doesn’t match the schema. 
+
+
+
+
+
+
