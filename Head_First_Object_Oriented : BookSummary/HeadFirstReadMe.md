@@ -62,4 +62,27 @@
     - Now, we dont need to create new class of every Instrument since every details are given to SpecificClass
     - Whenever someone want to search instruments or do some filters, they just have to invoke ``matches(InstrumentSpec)`` method
       - Since every spec is concrete class, we will pass that in matches method, it will behave it respectively 
-   
+
+#### Solving Really Big Problem
+  - Every big problem is solved once you solve the small problems of this big problem
+  - **_Points to be considered_**
+    - By encapsulating what varies, you make your application more flexible, and easier to change.
+    - Coding to an interface, rather than to an implementation, makes your software easier to extend.
+    - The best way to get good requirements is to understand what a system is supposed to do.
+    - Analysis helps you ensure your system works in a real-world context.
+  - **Use case diagrams**
+    - Sometimes you need to know what a system does, but don’t want to get into all the detail that use cases require. When you’re in a situation like this, a use case diagram could be just what you need:
+    - Take your use case diagram, and make sure that all the use cases you listed will cover all the features you got from the customer like below
+     ![](usecase.png)
+    - **Domain analysis**
+      - Once use cases are completed, check for domain analysis of every use cases like responsibility of every class/module
+      - To be specific : 
+        - Have all the feature list of every use cases
+        - Explain how they are solving big problem, make sure all use cases are covered
+      - Once every requirement is covered , now use
+      - **_Divide and Conquer_**
+    - Don’t forget who your customer really is
+      - Solve for those people only and their perspective and use cases are covered
+      - Always ask yourself if this use cases belong to your module or application
+
+#### Architecture: Bringing Order to Chaos
