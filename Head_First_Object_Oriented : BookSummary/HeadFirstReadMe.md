@@ -86,3 +86,21 @@
       - Always ask yourself if this use cases belong to your module or application
 
 #### Architecture: Bringing Order to Chaos
+  - Architecture is the organizational structure of a system, including its decomposition into parts, their connectivity, interaction mechanisms, and the guiding principles and decisions that you use in the design of a system.
+  - Even if we know to start by focusing on functionality, we still need to figure out which pieces are the most important. Those are the pieces we want to focus on first.
+  - **The three Qs of architecture**
+    - Is it part of the essence of the system?
+      - Is the feature really core to what a system actually is? Think about it this way: can you imagine the system without that feature? If not, then you’ve probably found a feature that is part of the essence of a system.
+    - What the heck does it mean?
+      - If you are not sure what this particular feature mean or works , get it first clear on priority
+    - How the “heck” do I do it? 
+      - features that seem really hard to implement, or are totally new programming tasks for you. If you have no idea how you’re going to tackle a particular problem, you better spend some time up front looking at that feature, 
+      - so it doesn’t create lots of problems down the road.
+    - All the Q's answer are basically the solving the RISK for project, hence you can work on parallel to solve those all Q's
+      - The reason that these features are architecturally significant is that they all introduce RISK to your project. It doesn’t matter which one you start with—as long as you are working towards reducing the RISKS in succeeding.
+    - Reducing risk : 
+      - Since three Q's are here to help you with Reducing RISK,
+      - But you also need to find all the scenario's, like designing Board for GAME, think of scenario's using board for playing game.
+
+
+
