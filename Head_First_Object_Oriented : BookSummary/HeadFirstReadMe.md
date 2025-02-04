@@ -101,6 +101,14 @@
     - Reducing risk : 
       - Since three Q's are here to help you with Reducing RISK,
       - But you also need to find all the scenario's, like designing Board for GAME, think of scenario's using board for playing game.
+      - A scenario gives us lots of the advantages of a use case, without forcing us to get into lots of detail that we don’t need to worry about right now.
+  - Adding unnecessary complicated requirement lead to we’re trying to reduce risk, not increase it by going with a solution that is a lot more complex than we really need.
+  - Find the Commonality in use cases classes encapsulate those to make it more flexible.
+  - OOA&D is all about code—it’s about writing great software, every time. 
+    - But the way you get to good code isn’t always by sitting down and writing it right away. 
+    - Sometimes the best way to write great code is to hold off on writing code as long as you can. 
+    - Plan, organize, architect, understand requirements, reduce risks... all these make the job of actually writing your code very simple.
 
+#### Design Principles: Originality is Overrated
 
 
