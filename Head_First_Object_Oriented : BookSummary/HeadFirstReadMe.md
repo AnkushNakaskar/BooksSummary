@@ -110,5 +110,42 @@
     - Plan, organize, architect, understand requirements, reduce risks... all these make the job of actually writing your code very simple.
 
 #### Design Principles: Originality is Overrated
+   - **_Design principle roundup_**
+     - Gathering requirements, analysis, writing out feature lists, and drawing use case diagrams. Of course, at some point you actually are going to have to write some code. And that’s where design principles really come into play.
+     - **_Principle #1: The Open-Closed Principle (OCP)_**
+       - Inheritance & Compositions are some examples of OCP
+       - It’s really a combination of encapsulation and abstraction. 
+         - You’re finding the behavior that stays the same, and abstracting that behavior away into a base class, 
+         - and then locking that code up from modification. But then when you need new or different behavior, 
+         - your subclasses handle the changes by extending the base class. That’s where encapsulation comes in: 
+         - you’re encapsulating what varies (behavior in the subclasses) away from what stays the same (the common behavior in the base class).
+     - **_Principle #2: The Don’t Repeat Yourself Principle (DRY)_**
+       - Let’s abstract out the common code
+       - remove the code from other locations
+       - reference the code from Step #1
+     - **_Principle #3: The Single Responsibility Principle (SRP)_**
+       - When we used a Map to store properties for all types of units in the Unit class, we were using the SRP. 
+         - So instead of having game-specific Units have to deal with their properties, 
+         - and still have the base Unit class dealing with a different set of properties, 
+         - we moved all property-related functionality into the nit class. So handling the properties feature is taken care of in ONE single place—the Unit class.
+     - **_Contestant #4: The Liskov Substitution Principle (LSP)_**
+       - The LSP is all about well-designed inheritance. When you inherit from a base class, you must be able to substitute your subclass for that base class without things going terribly wrong. Otherwise, you’ve used inheritance incorrectly!
+       - When you use inheritance, your subclass gets all the methods from its superclass, even if you don’t want those methods. And if you’ve used inheritance badly, then you’re going to end up with a lot of methods that you don’t want
+       - This principle is not always about inheritance , sometime composition can be use just to delegate or override the properties
+         - Delegate behavior to another class when you don’t want to change the behavior, but it’s not your object’s responsibility to implement that behavior on its own.
+       - Composition
+         - Composition is a restricted form of Aggregation in which two entities are highly dependent on each other.
+         - Like Vehicle -> Tyre , Engine, If vehicle is destroyed, tyre & engine will also be gone.
+       - Aggregation
+         - It is a special form of Association where:
+         - both entries can survive individually which means ending one entity will not affect the other.
+         - Like Student -> Department -> Institute etc.
+
+
+
+
+
+
+
 
 
